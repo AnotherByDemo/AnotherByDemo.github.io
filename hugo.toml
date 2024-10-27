@@ -1,0 +1,29 @@
+baseURL = 'https://example.org/'
+languageCode = 'ru-RU'
+title = 'ANOTHER.BY'
+description = 'Другая культура Беларуси'
+theme = 'ananke'
+
+DefaultContentLanguage = "ru"
+mainSections = ['blogs']
+
+[params]
+date_format = "2 January 2006"
+custom_css = ["gallery.css"]
+recent_posts_number = 10
+recent_copy = "Недавние статьи"
+
+
+[menus]
+  [[menus.main]]
+    name = 'Статьи'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Афиша'
+    pageRef = '/afisha/'
+    weight = 20
+  [[menus.main]]
+    name = 'Фотогалерея'
+    pageRef = '/gallery/'
+    weight = 30

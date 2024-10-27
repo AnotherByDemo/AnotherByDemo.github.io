@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="gallery-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+    {{ with .Params.author }}
+        <p>Автор: {{ . }}</p>
+    {{ end }}
+</div>
+
+<div class="gallery">
+    {{ with .Resources.ByType "image" }}
+        {{ range . }}
+        <div class="gallery-item">
+            <img src="{{ .RelPermalink }}" alt="{{ .Title }}" loading="lazy" />
+            <p class="gallery-caption">{{ .Title }}</p>
+        </div>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}
